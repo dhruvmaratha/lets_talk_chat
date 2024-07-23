@@ -42,7 +42,7 @@ class _ChatScreenState extends State<ChatScreen> {
               itemCount: 10,
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text('Message $index'),
+                  title: Text('Person $index'),
                 );
               },
             ),
