@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lets_talk_chat/screens/ChatScreen.dart';
 import 'package:lets_talk_chat/screens/ChatScreenEx.dart';
+import 'package:lets_talk_chat/screens/ChatScreen1.dart';
 import 'package:lets_talk_chat/screens/SignUpScreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -82,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       // Navigate to chat screen
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => ChatScreen()),
+                        MaterialPageRoute(builder: (context) => Chatscreen1()),
                       );
                     } else {
                       // Show error message

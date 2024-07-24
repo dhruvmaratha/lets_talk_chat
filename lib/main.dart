@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lets_talk_chat/screens/ChatScreen.dart';
+import 'package:lets_talk_chat/screens/ChatScreen1.dart';
 import 'package:lets_talk_chat/screens/LoginScreen.dart';
 import 'package:lets_talk_chat/screens/routes.dart';
 import 'package:lets_talk_chat/screens/shared_preferences.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: Routes.login,
       routes: {
         Routes.login: (context) => LoginScreen(),
-        Routes.chat: (context) => ChatScreen(),
+        Routes.chat: (context) => Chatscreen1(),
       },
       builder: (context, child) {
         return Scaffold(
