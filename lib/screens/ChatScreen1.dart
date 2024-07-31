@@ -198,6 +198,8 @@ class _ChatScreen1State extends State<ChatScreen1> {
             },
           ),
         ],
+        backgroundColor: Colors.blue[800],
+        elevation: 0,
       ),
       drawer: Drawer(
         child: Column(
@@ -229,7 +231,13 @@ class _ChatScreen1State extends State<ChatScreen1> {
 
                 // Navigate to the login page
                 Navigator.of(context).pushReplacementNamed('/login');
-                // Logout functionality
+
+                // Show a snackbar to indicate that the user has been logged out
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('You have been logged out'),
+                  ),
+                );
               },
             ),
           ],

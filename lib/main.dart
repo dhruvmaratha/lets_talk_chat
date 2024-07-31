@@ -1,32 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:lets_talk_chat/screens/ChatScreen.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:lets_talk_chat/screens/ChatScreen1.dart';
-import 'package:lets_talk_chat/screens/ChatScreen2.dart';
-import 'package:lets_talk_chat/screens/HomeScreen.dart';
 import 'package:lets_talk_chat/screens/LoginScreen.dart';
-import 'package:lets_talk_chat/screens/SplashScreen.dart';
-import 'package:lets_talk_chat/screens/routes.dart';
-import 'package:lets_talk_chat/screens/shared_preferences.dart';
 
-void main() async {
+
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await SharedPreferencesService.init();
-
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Let\'s Talk',
-      themeMode: ThemeMode.system,
-      initialRoute: Routes.start,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+      ),
+      home: LoginScreen(),
       routes: {
-        Routes.start:(context) => SplashScreen(),
-        Routes.login: (context) => LoginScreen(),
-        Routes.chat: (context) => ChatScreen1(),
+        '/login': (context) => LoginScreen(),
+        '/chat': (context) => ChatScreen1(),
       },
     );
   }
